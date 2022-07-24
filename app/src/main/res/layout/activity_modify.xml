@@ -2,9 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="10px">
+
+    <TextView
+        android:id="@+id/textID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/id" />
+
+    <EditText
+        android:id="@+id/editID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp" />
 
     <TextView
         android:id="@+id/textTitle"
@@ -108,7 +122,7 @@
             android:layout_marginEnd="10px"
             android:layout_marginRight="10px"
             android:layout_weight="1"
-            android:text="@string/btnINT" />
+            android:text="@string/btnUPD" />
 
         <Button
             android:id="@+id/btnDelete"
@@ -119,6 +133,14 @@
             android:layout_marginEnd="10px"
             android:layout_marginRight="10px"
             android:layout_weight="1"
-            android:text="@string/btnSHOW" />
+            android:text="@string/btnDEL" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/btnCAN" />
 </LinearLayout>
