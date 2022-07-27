@@ -27,6 +27,7 @@ public class SongListActivity extends AppCompatActivity {
         btnFilter = findViewById(R.id.btnFilter);
         lvSongs = findViewById(R.id.lvSongs);
 
+
         alSong = new ArrayList<Song>();
         aaSong = new ArrayAdapter<Song>(this,
                 android.R.layout.simple_list_item_1, alSong);

@@ -33,8 +33,8 @@ public class ModifyActivity extends AppCompatActivity {
         editTitle = findViewById(R.id.editTitle);
         editSingers = findViewById(R.id.editSinger);
         editYear = findViewById(R.id.editYear);
-        btnUpdate = findViewById(R.id.btnUpdate);
-        btnDelete = findViewById(R.id.btnDelete);
+        btnUpdate = findViewById(R.id.btnINSERT);
+        btnDelete = findViewById(R.id.btnSHOW);
         btnCancel = findViewById(R.id.btnCancel);
         Stars = findViewById(R.id.Ratings);
 

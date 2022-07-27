@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         editSingers = findViewById(R.id.editSinger);
         editYear = findViewById(R.id.editYear);
         Stars = findViewById(R.id.Ratings);
+        btnInsert = findViewById(R.id.btnINSERT);
+        btnShowList = findViewById(R.id.btnSHOW);
 
 
         btnInsert.setOnClickListener(new View.OnClickListener() {
@@ -43,15 +45,10 @@ public class MainActivity extends AppCompatActivity {
                 int year = Integer.parseInt(String.valueOf(editYear.getText()));
                 int stars = 0; // Temp
                 DBHelper dbh = new DBHelper(MainActivity.this);
-                long inserted_id = dbh.insertSong(title, singers, year, stars);
 
-                if (inserted_id != -1) {
-                    alSong.clear();
-                    alSong.addAll(dbh.getAllSongs());
-                    aaSong.notifyDataSetChanged();
-                    Toast.makeText(MainActivity.this, "Insert successful",
-                            Toast.LENGTH_SHORT).show();
-                }
+
+                Toast.makeText(MainActivity.this, "Insert successful",
+                        Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -59,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
         btnShowList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DBHelper dbHelper = new DBHelper(MainActivity.this);
+                alSong.clear();
+                alSong.addAll(dbHelper.getAllSongs());
+                aaSong.notifyDataSetChanged();
+
                 Song target = alSong.get(0);
 
                 Intent i = new Intent(MainActivity.this,
@@ -67,5 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
     }
 }

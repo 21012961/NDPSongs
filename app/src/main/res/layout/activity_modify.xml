@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -17,8 +18,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Enter song id"
         android:inputType="number"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textTitle"
@@ -114,7 +117,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnUpdate"
+            android:id="@+id/btnINSERT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10px"
@@ -125,7 +128,7 @@
             android:text="@string/btnUPD" />
 
         <Button
-            android:id="@+id/btnDelete"
+            android:id="@+id/btnSHOW"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10px"
