@@ -50,4 +50,13 @@ public class SongListActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        DBHelper dbHelper = new DBHelper(SongListActivity.this);
+        alSong.clear();
+        alSong.addAll(dbHelper.getAllSongs());
+        aaSong.notifyDataSetChanged();
+    }
+
 }
